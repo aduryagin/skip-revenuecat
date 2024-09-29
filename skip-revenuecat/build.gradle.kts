@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -9,17 +8,10 @@ plugins {
 }
 
 kotlin {
-    androidTarget {
-        publishLibraryVariants("release")
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_21) // Explicitly set JDK 21 for Android
-        }
-    }
+    androidTarget ()
     val iosX64 = iosX64()
     val iosArm64 = iosArm64()
     val iosSimulatorArm64 = iosSimulatorArm64()
-//    linuxX64()
 
     val xcFramework = XCFramework("SkipRevenuecat")
     configure(listOf(iosX64, iosArm64, iosSimulatorArm64)) {
@@ -44,11 +36,6 @@ kotlin {
                 implementation(libs.purchases.datetime)   // Optional
                 implementation(libs.purchases.either)     // Optional
                 implementation(libs.purchases.result)     // Optional
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.kotlin.test)
             }
         }
 
