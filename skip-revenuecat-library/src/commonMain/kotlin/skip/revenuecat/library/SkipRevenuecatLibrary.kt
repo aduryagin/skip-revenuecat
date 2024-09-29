@@ -1,4 +1,4 @@
-package skip.revenuecat
+package skip.revenuecat.library
 
 object Singleton {
     fun stringFunction(): String {

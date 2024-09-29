@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "skip-revenuecat"
-include(":skip-revenuecat")
+rootProject.name = "skip-revenuecat-library"
+include(":skip-revenuecat-library")

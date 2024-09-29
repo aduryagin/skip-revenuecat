@@ -17,10 +17,7 @@ kotlin {
     configure(listOf(iosX64, iosArm64, iosSimulatorArm64)) {
         binaries {
             framework {
-                baseName = "SkipRevenuecatLibrary" // Customize your framework name
-
-                // Add the XCFramework for iOS targets
-//                export(project(":path_to_your_xcframework"))
+                baseName = "SkipRevenuecatLibrary"
                 isStatic = true
                 xcFramework.add(this)
             }
@@ -48,7 +45,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.alekseiduriagin.skiprevenuecat"
+    namespace = "org.alekseiduriagin.skiprevenuecatlibrary"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
