@@ -13,11 +13,11 @@ kotlin {
     val iosArm64 = iosArm64()
     val iosSimulatorArm64 = iosSimulatorArm64()
 
-    val xcFramework = XCFramework("SkipRevenuecat")
+    val xcFramework = XCFramework("SkipRevenuecatLibrary")
     configure(listOf(iosX64, iosArm64, iosSimulatorArm64)) {
         binaries {
             framework {
-                baseName = "SkipRevenuecat" // Customize your framework name
+                baseName = "SkipRevenuecatLibrary" // Customize your framework name
 
                 // Add the XCFramework for iOS targets
 //                export(project(":path_to_your_xcframework"))

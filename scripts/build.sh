@@ -1,11 +1,11 @@
 #!/bin/sh
 set -ex
 
-gradle assembleSkipRevenuecatXCFramework
+gradle assembleSkipRevenuecatLibraryXCFramework
 
 cd skip-revenuecat/build/XCFrameworks/release/
 
-rm -f SkipRevenuecat.xcframework.zip
-zip -qr SkipRevenuecat.xcframework.zip SkipRevenuecat.xcframework
-ls -lah SkipRevenuecat.xcframework.zip
-shasum -a 256 SkipRevenuecat.xcframework.zip
+rm -f SkipRevenuecatLibrary.xcframework.zip
+zip -qr SkipRevenuecatLibrary.xcframework.zip SkipRevenuecatLibrary.xcframework
+ls -lah SkipRevenuecatLibrary.xcframework.zip
+shasum -a 256 SkipRevenuecatLibrary.xcframework.zip
