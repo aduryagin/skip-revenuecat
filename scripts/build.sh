@@ -3,7 +3,7 @@ set -ex
 
 gradle assembleSkipRevenuecatLibraryXCFramework
 
-cd skip-revenuecat/build/XCFrameworks/release/
+cd skip-revenuecat-library/build/XCFrameworks/release/
 
 rm -f SkipRevenuecatLibrary.xcframework.zip
 zip -qr SkipRevenuecatLibrary.xcframework.zip SkipRevenuecatLibrary.xcframework

@@ -33,7 +33,7 @@ esac
 # Output the new version
 echo "New version: $NEW_VERSION"
 
-ARTIFACT="skip-revenuecat/build/XCFrameworks/release/SkipRevenuecatLibrary.xcframework.zip"
+ARTIFACT="skip-revenuecat-library/build/XCFrameworks/release/SkipRevenuecatLibrary.xcframework.zip"
 
 gh release create --notes "$(cat ${ARTIFACT} | shasum -a 256)" ${NEW_VERSION} ${ARTIFACT}
 

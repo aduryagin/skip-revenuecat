@@ -12,9 +12,11 @@ kotlin {
     val iosX64 = iosX64()
     val iosArm64 = iosArm64()
     val iosSimulatorArm64 = iosSimulatorArm64()
+    val macosArm64 = macosArm64()
+    val macosX64 = macosX64()
 
     val xcFramework = XCFramework("SkipRevenuecatLibrary")
-    configure(listOf(iosX64, iosArm64, iosSimulatorArm64)) {
+    configure(listOf(iosX64, iosArm64, iosSimulatorArm64, macosArm64, macosX64)) {
         binaries {
             framework {
                 baseName = "SkipRevenuecatLibrary"
@@ -25,7 +27,11 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
+        val commonMain by getting { }
+
+        val iosMain by creating {
+            dependsOn(commonMain)
+
             dependencies {
                 //put your multiplatform dependencies here
 
@@ -34,6 +40,21 @@ kotlin {
                 implementation(libs.purchases.either)     // Optional
                 implementation(libs.purchases.result)     // Optional
             }
+        }
+        val iosArm64Main by getting {
+            dependsOn(iosMain)
+        }
+        val iosX64Main by getting {
+            dependsOn(iosMain)
+        }
+        val iosSimulatorArm64Main by getting {
+            dependsOn(iosMain)
+        }
+        val macosArm64Main by getting {
+            dependsOn(commonMain)
+        }
+        val macosX64Main by getting {
+            dependsOn(commonMain)
         }
 
         configureEach {
