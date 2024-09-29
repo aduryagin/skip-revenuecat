@@ -1,5 +1,4 @@
 pluginManagement {
-    includeBuild("convention-plugins")
     repositories {
         google()
         mavenCentral()
@@ -14,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "multiplatform-library-template"
-include(":library")
+rootProject.name = "skip-revenuecat"
+include(":skip-revenuecat")
