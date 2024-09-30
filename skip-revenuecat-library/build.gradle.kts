@@ -22,6 +22,12 @@ kotlin {
                 baseName = "SkipRevenuecatLibrary"
                 isStatic = true
                 xcFramework.add(this)
+
+                // Re-export RevenueCat libraries
+                export(libs.purchases.core)
+                export(libs.purchases.datetime)   // Optional
+                export(libs.purchases.either)     // Optional
+                export(libs.purchases.result)     // Optional
             }
         }
     }
@@ -35,10 +41,10 @@ kotlin {
             dependencies {
                 //put your multiplatform dependencies here
 
-                implementation(libs.purchases.core)
-                implementation(libs.purchases.datetime)   // Optional
-                implementation(libs.purchases.either)     // Optional
-                implementation(libs.purchases.result)     // Optional
+                api(libs.purchases.core)
+                api(libs.purchases.datetime)   // Optional
+                api(libs.purchases.either)     // Optional
+                api(libs.purchases.result)     // Optional
             }
         }
         val iosArm64Main by getting {
