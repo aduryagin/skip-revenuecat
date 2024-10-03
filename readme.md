@@ -1,1 +1,3 @@
 # SkipRevenueCat
+
+![Preview](./preview.gif)
