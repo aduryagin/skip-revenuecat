@@ -47,7 +47,7 @@ Change AndroidManifest.xml
 <!-- ... -->
 ```
 
-[Set API keys](skip-revenuecat-app/Sources/SkipRevenueCatApp/RevenueCat/Constants.swift)
+[Set API keys in ./skip-revenuecat-app/Sources/SkipRevenueCatApp/RevenueCat/Constants.swift](skip-revenuecat-app/Sources/SkipRevenueCatApp/RevenueCat/Constants.swift)
 
 # Usage
 Code samples can be found in [./skip-revenuecat-app/Sources/SkipRevenueCatApp/](./skip-revenuecat-app/Sources/SkipRevenueCatApp/)
