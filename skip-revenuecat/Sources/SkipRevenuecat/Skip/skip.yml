@@ -1,0 +1,15 @@
+# Configuration file for https://skip.tools project
+#
+# Kotlin dependencies and Gradle build options for this module can be configured here
+
+build:
+  contents:
+    - block: 'dependencies'
+      contents:
+        - 'implementation("com.revenuecat.purchases:purchases-kmp-core:1.1.0+13.3.0")'
+        - 'implementation("com.revenuecat.purchases:purchases-kmp-ui:1.1.0+13.3.0")'
+        - 'implementation("com.revenuecat.purchases:purchases-kmp-datetime:1.1.0+13.3.0")'
+        - 'implementation("com.revenuecat.purchases:purchases-kmp-either:1.1.0+13.3.0")'
+        - 'implementation("com.revenuecat.purchases:purchases-kmp-result:1.1.0+13.3.0")'
+        - 'debugImplementation("com.revenuecat.purchases:purchases-debug-view:6.9.2")'
+        - 'releaseImplementation("com.revenuecat.purchases:purchases-debug-view-noop:6.9.2")'

@@ -1,0 +1,32 @@
+# This file contains the fastlane.tools configuration
+# for the iOS half of the Skip app.
+# You can find the documentation at https://docs.fastlane.tools
+
+default_platform(:ios)
+
+lane :assemble do |options|
+  # only build the iOS side of the app
+  ENV["SKIP_ZERO"] = "true"
+  build_app(
+    sdk: "iphoneos",
+    xcconfig: "fastlane/AppStore.xcconfig",
+    xcargs: "-skipPackagePluginValidation -skipMacroValidation",
+    derived_data_path: "../.build/Darwin/DerivedData",
+    output_directory: "../.build/fastlane/Darwin",
+    skip_archive: ENV["FASTLANE_SKIP_ARCHIVE"] == "YES",
+    skip_codesigning: ENV["FASTLANE_SKIP_CODESIGNING"] == "YES"
+  )
+end
+
+lane :release do |options|
+  desc "Build and release app"
+
+  assemble
+
+  upload_to_app_store(
+    api_key_path: "fastlane/apikey.json",
+    app_rating_config_path: "fastlane/metadata/rating.json",
+    release_notes: { default: "Fixes and improvements." }
+  )
+end
+
