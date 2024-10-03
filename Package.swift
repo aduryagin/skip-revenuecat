@@ -30,6 +30,10 @@ let package = Package(
                 .product(name: "PurchasesHybridCommonUI", package: "purchases-hybrid-common"),
                 "SkipRevenueCatLibrary"
             ],
+            exclude: [
+                "../../skip-revenuecat-library/",
+                "../../skip-revenuecat-app/"
+            ],
             resources: [.process("Resources")],
             plugins: [.plugin(name: "skipstone", package: "skip")]
         ),
