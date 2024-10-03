@@ -9,11 +9,15 @@ let package = Package(
             name: "SkipRevenueCat",
             targets: ["SkipRevenueCat"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "skip-revenuecat"),
+    ],
     targets: [
         .target(
             name: "SkipRevenueCat",
-            dependencies: []
+            dependencies: [
+                "./skip-revenuecat",
+            ]
           ),
         .testTarget(
             name: "SkipRevenueCatTests",
