@@ -43,8 +43,8 @@ let package = Package(
         // ),
        .binaryTarget(
            name: "SkipRevenueCatLibrary",
-           url: "https://api.github.com/repos/aduryagin/skip-revenuecat/releases/assets/196665472.zip",
-           checksum: "f26f419120d63a53a4906b65a1fb6fdfde26fe89e4634c9d4f989cefa02c82b4"
+           url: "https://api.github.com/repos/aduryagin/skip-revenuecat/releases/assets/196687260.zip",
+           checksum: "9965542a0ee3043f1b54caa750e08d5906e8114f4035fe78ab348bdd40ca6c6f"
        ),
         
         .testTarget(
