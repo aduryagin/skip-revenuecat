@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://source.skip.tools/skip.git", from: "1.1.7"),
         .package(url: "https://source.skip.tools/skip-ui.git", from: "1.0.0"),
-        .package(name: "skip-revenuecat", path: "../skip-revenuecat")
+        .package(name: "skip-revenuecat", path: "../")
     ],
     targets: [
         .target(
