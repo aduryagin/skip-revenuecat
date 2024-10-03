@@ -33,11 +33,15 @@ let package = Package(
             resources: [.process("Resources")],
             plugins: [.plugin(name: "skipstone", package: "skip")]
         ),
-        .binaryTarget(
-            name: "SkipRevenueCatLibrary",
-            url: "https://api.github.com/repos/aduryagin/skip-revenuecat/releases/assets/195840500.zip",
-            checksum: "56ca61db9566fa65c39ce96444d80044f734d7f69e24a37d935ed53ef8dadfd3"
-        ),
+        // .binaryTarget(
+        //     name: "SkipRevenueCatLibrary",
+        //     path: "../skip-revenuecat-library/skip-revenuecat-library/build/XCFrameworks/release/SkipRevenueCatLibrary.xcframework"
+        // ),
+       .binaryTarget(
+           name: "SkipRevenueCatLibrary",
+           url: "https://api.github.com/repos/aduryagin/skip-revenuecat/releases/assets/196665472.zip",
+           checksum: "f26f419120d63a53a4906b65a1fb6fdfde26fe89e4634c9d4f989cefa02c82b4"
+       ),
         
         .testTarget(
             name: "SkipRevenueCatTests",
