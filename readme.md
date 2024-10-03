@@ -43,7 +43,8 @@ Change AndroidManifest.xml
         tools:node="remove"
     />
 </provider>
-<!--  -->
+
+<!-- ... -->
 ```
 
 [Set API keys](skip-revenuecat-app/Sources/SkipRevenueCatApp/RevenueCat/Constants.swift)
