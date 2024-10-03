@@ -15,7 +15,7 @@ kotlin {
     val macosArm64 = macosArm64()
     val macosX64 = macosX64()
 
-    val xcFramework = XCFramework("SkipRevenuecatLibrary")
+    val xcFramework = XCFramework("SkipRevenueCatLibrary")
     configure(listOf(iosX64, iosArm64, iosSimulatorArm64, macosArm64, macosX64)) {
         binaries {
             framework {
@@ -25,7 +25,7 @@ kotlin {
                 export(libs.purchases.either)     // Optional
                 export(libs.purchases.result)     // Optional
 
-                baseName = "SkipRevenuecatLibrary"
+                baseName = "SkipRevenueCatLibrary"
                 isStatic = true
                 xcFramework.add(this)
             }

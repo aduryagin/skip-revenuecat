@@ -40,7 +40,7 @@ let package = Package(
         ),
         
         .testTarget(
-            name: "SkipRevenuecatTests",
+            name: "SkipRevenueCatTests",
             dependencies: [
                 "SkipRevenueCat",
                 .product(name: "SkipTest", package: "skip")

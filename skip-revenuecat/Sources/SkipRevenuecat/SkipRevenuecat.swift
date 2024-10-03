@@ -21,7 +21,7 @@ public typealias KotlinUnit = Void
 #endif
 
 #if os(iOS)
-@_exported import SkipRevenuecatLibrary
+@_exported import SkipRevenueCatLibrary
 import PurchasesHybridCommon
 import PurchasesHybridCommonUI
 

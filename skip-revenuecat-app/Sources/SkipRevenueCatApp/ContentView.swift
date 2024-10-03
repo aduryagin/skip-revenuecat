@@ -6,6 +6,7 @@ import RevenueCatUI
 #else
 import com.revenuecat.purchases.kmp.ui.revenuecatui.PaywallFooter
 import com.revenuecat.purchases.ui.debugview.DebugRevenueCatScreen
+import com.revenuecat.purchases.kmp.ui.revenuecatui.PaywallOptions
 #endif
 
 public struct ContentView: View {
@@ -18,6 +19,12 @@ public struct ContentView: View {
     }
 
     public var body: some View {
+        #if SKIP
+        let options = remember {
+            PaywallOptions(dismissRequest: {}) { }
+        }
+        #endif
+
         VStack {
             if (Store.shared.subscriptionActive) {
                 Text("You're subscribed!")
