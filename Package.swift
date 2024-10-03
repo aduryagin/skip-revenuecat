@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "SkipRevenueCat",
             dependencies: [
-                "./skip-revenuecat",
+                "skip-revenuecat",
             ]
           ),
         .testTarget(
